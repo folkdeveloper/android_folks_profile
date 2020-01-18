@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 
 import com.creation.android.folkapp2019.LoginActivity;
 import com.creation.android.folkapp2019.R;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -62,9 +64,6 @@ public class Basic extends Fragment {
     private String m_text,m_otp;
 
 
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private CollectionReference ProfileCollection = db.collection("Profile");
-
 
     public Basic() {
         // Required empty public constructor
@@ -77,8 +76,7 @@ public class Basic extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_profile_basic, container, false);
 
         name = view.findViewById(R.id.name);
@@ -182,6 +180,9 @@ public class Basic extends Fragment {
 
 
         //loading the data from database and entering it in their corresponding fields
+        FirebaseFirestore db =  FirebaseFirestore.getInstance();
+        CollectionReference ProfileCollection = db.collection("Profile");
+
         ProfileCollection
                 .whereEqualTo("mobile",phone)
                 .get()
@@ -459,31 +460,36 @@ public class Basic extends Fragment {
                                     m_otp = input1.getText().toString();
                                     if(m_otp.equals(OTP[0])){
                                         mobile.setText(input.getText().toString().trim());
+
+                                        FirebaseFirestore db =  FirebaseFirestore.getInstance();
+                                        CollectionReference ProfileCollection = db.collection("Profile");
+
                                         ProfileCollection.whereEqualTo("mobile",phone).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                                             @Override
                                             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                                                 for(QueryDocumentSnapshot documentSnapshot: queryDocumentSnapshots){
-                                                    docID = documentSnapshot.getId();
+                                                    FirebaseFirestore db =  FirebaseFirestore.getInstance();
+                                                    DocumentReference mobRef = db.document("Profile/"+documentSnapshot.getId().toString());
+                                                    mobRef.update("mobile",mobile.getText().toString().trim()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                        @Override
+                                                        public void onSuccess(Void aVoid) {
+                                                            Toast.makeText(getContext(), "Successfully Verified\nMobile number updated", Toast.LENGTH_SHORT).show();
+                                                            FirebaseAuth.getInstance().signOut();
+                                                            Intent intent = new Intent(getContext(), LoginActivity.class);
+                                                            startActivity(intent);
+                                                            getActivity().finish();
+                                                            dialog1.dismiss();
+                                                        }
+                                                    });
                                                 }
                                             }
                                         });
-                                        DocumentReference mobRef = db.document("Profile/"+docID);
-                                        mobRef.update("mobile","+91"+mobile.getText().toString().trim());
-                                        Toast.makeText(getContext(), "Successfully Verified\nMobile number updated", Toast.LENGTH_SHORT).show();
-                                        FirebaseAuth.getInstance().signOut();
-                                        Intent intent = new Intent(getContext(), LoginActivity.class);
-
-                                        startActivity(intent);
-                                        getActivity().finish();
-                                        dialog1.dismiss();
                                     }
                                     else{
                                         dialog1.setTitle("Incorrect OTP");
                                         dialog1.setMessage("Press Resend OTP to get new OTP");
-
                                         Toast.makeText(getContext(), "Verification failed", Toast.LENGTH_SHORT).show();
                                     }
-//                                    dialog1.dismiss();
                                 }
                             });
                             Button neutralButton = dialog1.getButton(AlertDialog.BUTTON_NEUTRAL);
@@ -495,7 +501,6 @@ public class Basic extends Fragment {
                                     dialog1.setMessage("Please Enter your New OTP");
                                 }
                             });
-
                         }
                         dialog.dismiss();
                     }
@@ -507,43 +512,45 @@ public class Basic extends Fragment {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseFirestore db =  FirebaseFirestore.getInstance();
+                CollectionReference ProfileCollection = db.collection("Profile");
                 ProfileCollection.whereEqualTo("mobile",phone).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         for(QueryDocumentSnapshot documentSnapshot: queryDocumentSnapshots){
+                            Toast.makeText(getContext(),"____"+ documentSnapshot.getId().toString(), Toast.LENGTH_SHORT).show();
                             docID = documentSnapshot.getId();
+                            int radioID = maritalStatus.getCheckedRadioButtonId();
+                            RadioButton btn = view.findViewById(radioID);
+
+                            FirebaseFirestore db =  FirebaseFirestore.getInstance();
+                            DocumentReference docref = db.document("Profile/"+documentSnapshot.getId().toString());
+
+                            docref.update("name",name.getText().toString().trim());
+                            docref.update("marital_status",btn.getText().toString());
+                            docref.update("dob",dob.getText().toString().trim());
+                            docref.update("gender",gender.getSelectedItem().toString().trim());
+                            docref.update("address.stay",stay.getText().toString().trim());
+                            docref.update("city",city.getText().toString().trim());
+                            docref.update("whatsapp",whatsapp.getText().toString().trim());
+                            docref.update("email",email.getText().toString().trim());
+                            docref.update("education.college",college.getSelectedItem().toString().trim());
+                            docref.update("education.branch",branch.getSelectedItem().toString().trim());
+                            docref.update("education.stream",stream.getSelectedItem().toString().trim());
+                            docref.update("education.course_year",year.getSelectedItem().toString().trim());
+                            docref.update("occupation",occupation.getSelectedItem().toString().trim());
+                            docref.update("occupation_details.designation",designation.getSelectedItem().toString().trim());
+                            docref.update("occupation_details.working_with",workWith.getText().toString().trim());
+
+                            Toast.makeText(getContext(), "Update Successful", Toast.LENGTH_SHORT).show();
                         }
                     }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getContext(), "data retrival failed", Toast.LENGTH_SHORT).show();
+                    }
                 });
-
-                int radioID = maritalStatus.getCheckedRadioButtonId();
-                RadioButton btn = view.findViewById(radioID);
-
-                if(docID==null){
-                    Toast.makeText(getContext(), "Update unsuccessful\n Try updating again", Toast.LENGTH_SHORT).show();
-                }
-                DocumentReference docref = db.document("Profile/"+docID);
-
-                docref.update("name",name.getText().toString().trim());
-                docref.update("marital_status",btn.getText().toString());
-                docref.update("dob",dob.getText().toString().trim());
-                docref.update("gender",gender.getSelectedItem().toString().trim());
-                docref.update("address.stay",stay.getText().toString().trim());
-                docref.update("city",city.getText().toString().trim());
-                docref.update("whatsapp",whatsapp.getText().toString().trim());
-                docref.update("email",email.getText().toString().trim());
-                docref.update("education.college",college.getSelectedItem().toString().trim());
-                docref.update("education.branch",branch.getSelectedItem().toString().trim());
-                docref.update("education.stream",stream.getSelectedItem().toString().trim());
-                docref.update("education.year",year.getSelectedItem().toString().trim());
-                docref.update("occupation",occupation.getSelectedItem().toString().trim());
-                docref.update("occupation_details.designation",designation.getSelectedItem().toString().trim());
-                docref.update("occupation_details.working_with",workWith.getText().toString().trim());
-
-                if(docID!=null) {
-                    Toast.makeText(getContext(), "Update Successful", Toast.LENGTH_SHORT).show();
-                }
-
             }
         });
 
