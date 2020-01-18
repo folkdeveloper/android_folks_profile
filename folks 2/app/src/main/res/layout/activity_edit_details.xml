@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".EditDetails">
+
+    <TextView
+        android:id="@+id/others"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="Others"
+        android:textColor="#FF292929"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/talents"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="Talents"
+        android:textColor="#FF292929"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/basic"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="Basic"
+        android:background="#FFFFFF"
+        android:textColor="#FF292929"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pagerDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/others" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

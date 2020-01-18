@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    tools:context=".fragments.Details">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--Personal Details section-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Personal details"
+            android:paddingLeft="30dp"
+            android:background="#f1edf5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="105dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/rectangle"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="name"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="#FF292929"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="175dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="152dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/rectangle"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Mobile Number"
+                android:focusable="false"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="#FF292929"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="84dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Marital Status"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+            android:id="@+id/marriage_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="130dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/m1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Married"
+                        tools:layout_editor_absoluteX="31dp"
+                        tools:layout_editor_absoluteY="107dp" />
+
+                    <RadioButton
+                        android:id="@+id/m2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Single"
+                        tools:layout_editor_absoluteX="115dp"
+                        tools:layout_editor_absoluteY="107dp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="176dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="DOB"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="175dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="168dp"
+                android:background="@drawable/rectangle"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="DOB"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="#FF292929"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="224dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Gender"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+                android:id="@+id/gender"
+                android:layout_width="175dp"
+                android:layout_height="39dp"
+                android:background="@drawable/rectangle"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="216dp"
+                android:textColor="#FF292929"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--        Address and contact details-->
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="260dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Contact and Address"
+                android:paddingLeft="30dp"
+                android:background="#f1edf5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#000"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="296dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Address"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+                android:id="@+id/stay"
+                android:layout_width="250dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="324dp"
+                android:background="@drawable/rectangle"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Stay"
+                android:focusable="false"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="#FF292929"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="370dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="City"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="398dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="city"
+            android:focusable="false"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="448dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Whatsapp Number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/whatsapp"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="476dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Whatsapp number"
+            android:focusable="false"
+            android:inputType="phone"
+            android:padding="5dp"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="528dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Email "
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="556dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--            education details-->
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="608dp"
+        android:background="#f1edf5"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="30dp"
+        android:text="Education"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000"
+        android:textSize="21sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="644dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="College"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/college"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="668dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:padding="5dp"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="708dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Branch"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/branch"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="732dp"
+            android:ems="10"
+            android:background="@drawable/rectangle"
+            android:padding="5dp"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="772dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Stream"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/stream"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="795dp"
+            android:ems="10"
+            android:background="@drawable/rectangle"
+            android:padding="5dp"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="836dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Year"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/year"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="860dp"
+            android:ems="10"
+            android:background="@drawable/rectangle"
+            android:padding="5dp"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="910dp"
+                android:background="#f1edf5"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="30dp"
+                android:text="Occupation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#000"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="955dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Occupation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/Occupation"
+                android:layout_width="250dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="984dp"
+                android:ems="10"
+                android:inputType="text"
+                android:background="@drawable/rectangle"
+                android:padding="5dp"
+                android:textColor="#FF292929"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="1025dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Designation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/designation"
+                android:layout_width="250dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="1056dp"
+                android:ems="10"
+                android:background="@drawable/rectangle"
+                android:padding="5dp"
+                android:textColor="#FF292929"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="1100dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Work With"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/workwith"
+                android:layout_width="250dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="1125dp"
+                android:background="@drawable/rectangle"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Work with"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="#FF292929"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
