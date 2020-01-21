@@ -30,7 +30,7 @@
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="105dp"
+            android:layout_width="120dp"
             android:layout_height="39dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="36dp"
@@ -44,29 +44,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <EditText
             android:id="@+id/mobile"
             android:layout_width="175dp"
             android:layout_height="39dp"
-            android:layout_marginStart="152dp"
+            android:layout_marginStart="168dp"
             android:layout_marginTop="36dp"
             android:background="@drawable/rectangle"
             android:ems="10"
-            android:inputType="phone"
             android:focusable="false"
-            android:padding="5dp"
             android:fontFamily="sans-serif-condensed"
+            android:inputType="phone"
+            android:padding="5dp"
             android:textColor="#FF292929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <Button
             android:id="@+id/mobile_edit"
             android:layout_width="35dp"
             android:layout_height="39dp"
-            android:layout_marginStart="332dp"
+            android:layout_marginStart="344dp"
             android:layout_marginTop="36dp"
+            android:background="@android:color/transparent"
             android:drawableLeft="@drawable/ic_edit_button"
             android:ems="10"
             android:fontFamily="sans-serif-condensed"

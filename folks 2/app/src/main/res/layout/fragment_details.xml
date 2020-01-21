@@ -27,12 +27,13 @@
 
             <EditText
                 android:id="@+id/name"
-                android:layout_width="105dp"
+                android:layout_width="120dp"
                 android:layout_height="39dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="36dp"
                 android:background="@drawable/rectangle"
                 android:ems="10"
+                android:focusable="false"
                 android:fontFamily="sans-serif-condensed"
                 android:hint="name"
                 android:inputType="text"
@@ -41,24 +42,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/mobile"
-                android:layout_width="175dp"
-                android:layout_height="39dp"
-                android:layout_marginStart="152dp"
-                android:layout_marginTop="36dp"
-                android:background="@drawable/rectangle"
-                android:ems="10"
-                android:fontFamily="sans-serif-condensed"
-                android:hint="Mobile Number"
-                android:focusable="false"
-                android:inputType="text"
-                android:padding="5dp"
-                android:textColor="#FF292929"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="175dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Mobile Number"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -87,6 +88,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Married"
+                        android:enabled="false"
+                        android:defaultFocusHighlightEnabled="true"
                         tools:layout_editor_absoluteX="31dp"
                         tools:layout_editor_absoluteY="107dp" />
 
@@ -95,6 +98,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Single"
+                        android:defaultFocusHighlightEnabled="true"
+                        android:enabled="false"
                         tools:layout_editor_absoluteX="115dp"
                         tools:layout_editor_absoluteY="107dp" />
 
@@ -144,14 +149,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
+        <EditText
                 android:id="@+id/gender"
                 android:layout_width="175dp"
                 android:layout_height="39dp"
                 android:background="@drawable/rectangle"
                 android:layout_marginStart="80dp"
                 android:layout_marginTop="216dp"
+                android:focusable="false"
                 android:textColor="#FF292929"
+                android:padding="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -324,7 +331,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
+        <EditText
             android:id="@+id/college"
             android:layout_width="250dp"
             android:layout_height="39dp"
@@ -332,6 +339,7 @@
             android:layout_marginTop="668dp"
             android:background="@drawable/rectangle"
             android:ems="10"
+            android:focusable="false"
             android:padding="5dp"
             android:textColor="#FF292929"
             app:layout_constraintStart_toStartOf="parent"
@@ -350,13 +358,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
+        <EditText
             android:id="@+id/branch"
             android:layout_width="250dp"
             android:layout_height="39dp"
             android:layout_marginStart="60dp"
             android:layout_marginTop="732dp"
             android:ems="10"
+            android:focusable="false"
             android:background="@drawable/rectangle"
             android:padding="5dp"
             android:textColor="#FF292929"
@@ -376,13 +385,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
+        <EditText
             android:id="@+id/stream"
             android:layout_width="250dp"
             android:layout_height="39dp"
             android:layout_marginStart="60dp"
             android:layout_marginTop="795dp"
             android:ems="10"
+            android:focusable="false"
             android:background="@drawable/rectangle"
             android:padding="5dp"
             android:textColor="#FF292929"
@@ -402,13 +412,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
+        <EditText
             android:id="@+id/year"
             android:layout_width="250dp"
             android:layout_height="39dp"
             android:layout_marginStart="60dp"
             android:layout_marginTop="860dp"
             android:ems="10"
+            android:focusable="false"
             android:background="@drawable/rectangle"
             android:padding="5dp"
             android:textColor="#FF292929"
@@ -442,13 +453,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Spinner
+            <EditText
                 android:id="@+id/Occupation"
                 android:layout_width="250dp"
                 android:layout_height="39dp"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="984dp"
                 android:ems="10"
+                android:focusable="false"
                 android:inputType="text"
                 android:background="@drawable/rectangle"
                 android:padding="5dp"
@@ -469,13 +481,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Spinner
+            <EditText
                 android:id="@+id/designation"
                 android:layout_width="250dp"
                 android:layout_height="39dp"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="1056dp"
                 android:ems="10"
+                android:focusable="false"
                 android:background="@drawable/rectangle"
                 android:padding="5dp"
                 android:textColor="#FF292929"

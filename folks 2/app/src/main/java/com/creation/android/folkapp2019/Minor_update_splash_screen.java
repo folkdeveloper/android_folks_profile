@@ -24,14 +24,13 @@ public class Minor_update_splash_screen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_minor_update_splash_screen);
+        setContentView(R.layout.splash_screen_minor_update);
 
         final String versionName = BuildConfig.VERSION_NAME;
         final TextView textView = findViewById(R.id.currentVersion);
 
         DocumentReference VersionDoc = db.document("Folkapp/version");
         final String sdk = String.valueOf(Build.VERSION.SDK_INT).trim();
-        Toast.makeText(this, "SDK  "+versionName, Toast.LENGTH_SHORT).show();
 
 
 
@@ -40,7 +39,6 @@ public class Minor_update_splash_screen extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.get("android_temp."+sdk)!=null) {
                     String version_available = documentSnapshot.getString("android_temp."+sdk);
-                    Toast.makeText(Minor_update_splash_screen.this,"Version "+versionName, Toast.LENGTH_SHORT).show();
 
                     if(versionName.equals(version_available)){
                         Intent mainIntent = new Intent(Minor_update_splash_screen.this, LoginActivity.class);

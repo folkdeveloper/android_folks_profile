@@ -50,7 +50,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class Basic extends Fragment {
+public class Basic extends Fragment{
 
     private Spinner occupation,college,branch,stream,year,designation;
     private String phone;
@@ -397,12 +397,10 @@ public class Basic extends Fragment {
 
 
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------
+//Mobile number verification
         mobileEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mobile.setFocusableInTouchMode(true);
-
                 final String[] Mobile_number = {mobile.getText().toString().trim()};
 
                 final EditText input = new EditText(getContext());
@@ -519,7 +517,6 @@ public class Basic extends Fragment {
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         for(QueryDocumentSnapshot documentSnapshot: queryDocumentSnapshots){
                             Toast.makeText(getContext(),"____"+ documentSnapshot.getId().toString(), Toast.LENGTH_SHORT).show();
-                            docID = documentSnapshot.getId();
                             int radioID = maritalStatus.getCheckedRadioButtonId();
                             RadioButton btn = view.findViewById(radioID);
 
@@ -588,13 +585,10 @@ public class Basic extends Fragment {
     private class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int pos,long id) {
-
         }
-
         @Override
         public void onNothingSelected(AdapterView<?> arg0) {
             // TODO Auto-generated method stub
         }
-
     }
 }
