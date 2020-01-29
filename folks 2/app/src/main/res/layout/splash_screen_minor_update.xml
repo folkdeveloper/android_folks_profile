@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    tools:context=".Minor_update_splash_screen">
+    android:background="#008CF0"
+    tools:context=".Splash_screen_minor_update">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

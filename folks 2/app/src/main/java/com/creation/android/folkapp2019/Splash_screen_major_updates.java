@@ -17,7 +17,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 
-public class Update_splashScreen extends AppCompatActivity {
+public class Splash_screen_major_updates extends AppCompatActivity {
 
     private static int SPLASH_TIME = 2000;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -33,6 +33,7 @@ public class Update_splashScreen extends AppCompatActivity {
 
         DocumentReference VersionDoc = db.document("Folkapp/version");
         final String sdk = String.valueOf(Build.VERSION.SDK_INT).trim();
+        Toast.makeText(this, sdk, Toast.LENGTH_SHORT).show();
 
 
         VersionDoc.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -42,18 +43,20 @@ public class Update_splashScreen extends AppCompatActivity {
                     String version_required = documentSnapshot.getString("android."+sdk);
                     String version_available = documentSnapshot.getString("android_temp."+sdk);
 
-//                    if(versionName.equals(version_available)){
-//                                Intent mainIntent = new Intent(Update_splashScreen.this, LoginActivity.class);
-//                                Update_splashScreen.this.startActivity(mainIntent);
-//                                Update_splashScreen.this.finish();
-//                    }
-                    if(versionName.equals(version_required)){
-                        Intent mainIntent = new Intent(Update_splashScreen.this, Minor_update_splash_screen.class);
-                        Update_splashScreen.this.startActivity(mainIntent);
-                        Update_splashScreen.this.finish();
+                    if(versionName.equals(version_available)){
+                                Intent mainIntent = new Intent(Splash_screen_major_updates.this, LoginActivity.class);
+                                Splash_screen_major_updates.this.startActivity(mainIntent);
+                                Splash_screen_major_updates.this.finish();
+                    }
+                    else if(versionName.equals(version_required)){
+                        Intent mainIntent = new Intent(Splash_screen_major_updates.this, Splash_screen_minor_update.class);
+                        Splash_screen_major_updates.this.startActivity(mainIntent);
+                        Splash_screen_major_updates.this.finish();
+
+
                     }
                     else{
-                        final AlertDialog dialog = new AlertDialog.Builder(Update_splashScreen.this)
+                        final AlertDialog dialog = new AlertDialog.Builder(Splash_screen_major_updates.this)
                                 .setTitle("Important Update available!")
                                 .setMessage("Minimum version "+version_required+" is Required")
                                 .setIcon(R.drawable.ic_update_24px)
@@ -65,9 +68,9 @@ public class Update_splashScreen extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 //update link
-                                Intent mainIntent = new Intent(Update_splashScreen.this, Minor_update_splash_screen.class);
-                                Update_splashScreen.this.startActivity(mainIntent);
-                                Update_splashScreen.this.finish();
+                                Intent mainIntent = new Intent(Splash_screen_major_updates.this, Splash_screen_minor_update.class);
+                                Splash_screen_major_updates.this.startActivity(mainIntent);
+                                Splash_screen_major_updates.this.finish();
                                 dialog.dismiss();
                             }
                         });

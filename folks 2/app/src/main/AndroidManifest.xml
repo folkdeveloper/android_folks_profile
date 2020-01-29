@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Minor_update_splash_screen"></activity>
+        <activity android:name=".Profile_talents"></activity>
+        <activity android:name=".Splash_screen_first_use" />
+        <activity android:name=".Splash_screen_minor_update" />
         <activity android:name=".MainActivity" />
         <activity android:name=".EditDetails" />
         <activity android:name=".AwatingApproval" />
@@ -27,7 +29,7 @@
         <activity android:name=".Folk_signup" />
         <activity android:name=".LoginActivity" />
         <activity
-            android:name=".Update_splashScreen"
+            android:name=".Splash_screen_major_updates"
             android:label="@string/app_name"
             android:versionCode="1"
             android:versionName="5.0">

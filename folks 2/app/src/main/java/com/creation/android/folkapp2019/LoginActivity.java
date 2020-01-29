@@ -279,7 +279,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(),"Successful login!",Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(LoginActivity.this,Splash_screen.class);
+                            Intent i = new Intent(LoginActivity.this,Splash_screen_first_use.class);
                             startActivity(i);
 
                         } else {
@@ -300,7 +300,7 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             Toast.makeText(getApplicationContext(), currentUser.getPhoneNumber(), Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(LoginActivity.this,Splash_screen.class));
+            startActivity(new Intent(LoginActivity.this,Splash_screen_first_use.class));
         }
 
     }

@@ -35,8 +35,7 @@ import java.util.List;
 
 public class Profile extends Fragment {
 
-    TextView activity,KC_academics,Details;
-    Button editButton;
+    private TextView activity,KC_academics,Details;
 
     public Profile() {
         // Required empty public constructor
@@ -71,7 +70,6 @@ public class Profile extends Fragment {
         KC_academics = getActivity().findViewById(R.id.kcacademics);
         Details = getActivity().findViewById(R.id.details);
 
-        editButton = getActivity().findViewById(R.id.btn_edit);
 
         List<Fragment> fragments = getFragments();
         MyPageAdapter pageAdapter = new MyPageAdapter(getChildFragmentManager(),fragments);
@@ -190,14 +188,7 @@ public class Profile extends Fragment {
         folkGuide = getActivity().findViewById(R.id.folk_guide);
         folkLevel = getActivity().findViewById(R.id.folk_lvl);
 
-        editButton = getActivity().findViewById(R.id.btn_edit);
-        editButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), EditDetails.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 

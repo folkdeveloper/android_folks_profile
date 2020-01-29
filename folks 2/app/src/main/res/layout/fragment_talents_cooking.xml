@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.fragments_talents.Cooking">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#F5F5F5"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="fill_vertical"
+            android:paddingLeft="30dp"
+            android:text="Cooking"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ToggleButton
+            android:id="@+id/select_cooking"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/tbutton"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <RatingBar
+            android:id="@+id/Cooking_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="88dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Rate your skills"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="145dp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="30dp"
+            android:text="Can Cook For"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/canCookFor"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:padding="5dp"
+            android:text="can cook for"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="172dp"
+            android:layout_marginTop="177dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="members"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="224dp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="30dp"
+            android:text="Skills"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/South_indian"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="256dp"
+            android:background="@drawable/button_bg"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:padding="5dp"
+            android:text="South Indian"
+            android:textAlignment="center"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/North_Indian"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="256dp"
+            android:background="@drawable/button_bg"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:padding="5dp"
+            android:text="North Indian"
+            android:textAlignment="center"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Continential"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="296dp"
+            android:background="@drawable/button_bg"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:padding="5dp"
+            android:text="Continential"
+            android:textAlignment="center"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Bakery"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="296dp"
+            android:background="@drawable/button_bg"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:padding="5dp"
+            android:text="Bakery"
+            android:textAlignment="center"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -9,14 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class Minor_update_splash_screen extends AppCompatActivity {
+public class Splash_screen_minor_update extends AppCompatActivity {
 
     private static int SPLASH_TIME = 2000;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -41,12 +40,12 @@ public class Minor_update_splash_screen extends AppCompatActivity {
                     String version_available = documentSnapshot.getString("android_temp."+sdk);
 
                     if(versionName.equals(version_available)){
-                        Intent mainIntent = new Intent(Minor_update_splash_screen.this, LoginActivity.class);
-                        Minor_update_splash_screen.this.startActivity(mainIntent);
-                        Minor_update_splash_screen.this.finish();
+                        Intent mainIntent = new Intent(Splash_screen_minor_update.this, LoginActivity.class);
+                        Splash_screen_minor_update.this.startActivity(mainIntent);
+                        Splash_screen_minor_update.this.finish();
                     }
                     else{
-                        final AlertDialog dialog = new AlertDialog.Builder(Minor_update_splash_screen.this)
+                        final AlertDialog dialog = new AlertDialog.Builder(Splash_screen_minor_update.this)
                                 .setTitle("Minor Update available!")
                                 .setMessage("Version "+version_available+" is Available")
                                 .setIcon(R.drawable.ic_update_24px)
@@ -58,9 +57,9 @@ public class Minor_update_splash_screen extends AppCompatActivity {
                         positiveButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent mainIntent = new Intent(Minor_update_splash_screen.this, LoginActivity.class);
-                                Minor_update_splash_screen.this.startActivity(mainIntent);
-                                Minor_update_splash_screen.this.finish();
+                                Intent mainIntent = new Intent(Splash_screen_minor_update.this, LoginActivity.class);
+                                Splash_screen_minor_update.this.startActivity(mainIntent);
+                                Splash_screen_minor_update.this.finish();
                                 dialog.dismiss();
                             }
                         });
@@ -69,9 +68,9 @@ public class Minor_update_splash_screen extends AppCompatActivity {
                         negativeButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent mainIntent = new Intent(Minor_update_splash_screen.this, LoginActivity.class);
-                                Minor_update_splash_screen.this.startActivity(mainIntent);
-                                Minor_update_splash_screen.this.finish();
+                                Intent mainIntent = new Intent(Splash_screen_minor_update.this, LoginActivity.class);
+                                Splash_screen_minor_update.this.startActivity(mainIntent);
+                                Splash_screen_minor_update.this.finish();
                                 dialog.dismiss();
                             }
                         });

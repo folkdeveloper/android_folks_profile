@@ -2,6 +2,7 @@ package com.creation.android.folkapp2019.fragments;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -20,7 +21,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.creation.android.folkapp2019.EditDetails;
 import com.creation.android.folkapp2019.MainActivity;
+import com.creation.android.folkapp2019.Profile_talents;
 import com.creation.android.folkapp2019.R;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -54,6 +57,9 @@ public class Details extends Fragment implements AdapterView.OnItemSelectedListe
     private RadioButton married,unmarried;
     private RadioGroup maritalStatus;
     private EditText gender;
+    private Button talentsButton;
+    private Button editButton;
+
 
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -75,6 +81,7 @@ public class Details extends Fragment implements AdapterView.OnItemSelectedListe
 
         final View view = inflater.inflate(R.layout.fragment_details, container, false);
 
+        editButton = view.findViewById(R.id.btn_edit);
         name = view.findViewById(R.id.name);
         whatsapp = view.findViewById(R.id.whatsapp);
         stay = view.findViewById(R.id.stay);
@@ -94,6 +101,7 @@ public class Details extends Fragment implements AdapterView.OnItemSelectedListe
         stream = view.findViewById(R.id.stream);
         year = view.findViewById(R.id.year);
         designation = view.findViewById(R.id.designation);
+        talentsButton = view.findViewById(R.id.TalentsButton);
 
         // Inflate the layout for this fragment
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -104,6 +112,22 @@ public class Details extends Fragment implements AdapterView.OnItemSelectedListe
             @Override
             public void onClick(View v) {
 
+            }
+        });
+
+        talentsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent talents = new Intent(getContext(), Profile_talents.class);
+                startActivity(talents);
+            }
+        });
+
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), EditDetails.class);
+                startActivity(intent);
             }
         });
 

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".EditDetails">
+    tools:context=".Profile_talents">
 
     <Button
-        android:id="@+id/backDetails"
+        android:id="@+id/back"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -17,32 +16,34 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbarTalents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="0dp"
-        app:title="Details" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="Talent List"
+        tools:ignore="MissingConstraints">
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
+        android:id="@+id/TalentsTitles"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarTalents"
         app:tabIndicatorColor="#0000ff"
         app:tabSelectedTextColor="#0000ff"
-        android:isScrollContainer="true"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:tabMode="scrollable"
+        tools:ignore="MissingConstraints" />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pagerDetails"
+        android:id="@+id/talentsVIew"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/title"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_marginTop="112dp"
+        app:layout_constraintTop_toBottomOf="@+id/TalentsTitles"
+        tools:layout_editor_absoluteX="0dp" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
