@@ -39,7 +39,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <EditText
+        <Button
             android:id="@+id/International_freestyle"
             android:layout_width="100dp"
             android:layout_height="30dp"
@@ -70,7 +70,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/college_freestyle"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -88,7 +88,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/District_freestyle"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -106,7 +106,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/State_freestyle"
             android:layout_width="70dp"
             android:layout_height="30dp"
@@ -124,7 +124,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/national_freestyle"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -171,7 +171,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <EditText
+        <Button
             android:id="@+id/International_western"
             android:layout_width="100dp"
             android:layout_height="30dp"
@@ -202,7 +202,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/college_western"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -220,7 +220,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/District_western"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -238,7 +238,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/State_western"
             android:layout_width="70dp"
             android:layout_height="30dp"
@@ -256,7 +256,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/national_western"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -316,7 +316,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/District_classical"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -334,7 +334,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/State_classical"
             android:layout_width="70dp"
             android:layout_height="30dp"
@@ -352,7 +352,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/national_classical"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -370,7 +370,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/International_classical"
             android:layout_width="100dp"
             android:layout_height="30dp"
@@ -388,7 +388,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/college_classical"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -465,7 +465,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/college_others"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -483,7 +483,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/District_others"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -501,7 +501,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/State_others"
             android:layout_width="70dp"
             android:layout_height="30dp"
@@ -519,7 +519,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/national_others"
             android:layout_width="80dp"
             android:layout_height="30dp"
@@ -537,7 +537,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <Button
             android:id="@+id/International_others"
             android:layout_width="100dp"
             android:layout_height="30dp"

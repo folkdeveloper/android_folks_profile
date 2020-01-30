@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.fragments_talents.Cooking">
+    tools:context=".fragments.fragments_talents.Sports">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,18 +16,18 @@
             android:layout_height="50dp"
             android:background="#F5F5F5"
             android:fontFamily="sans-serif-condensed"
-            android:gravity="fill_vertical"
+            android:gravity="center_vertical"
             android:paddingLeft="30dp"
-            android:text="Cooking"
-            android:textAllCaps="false"
+            android:text="Sports"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <ToggleButton
-            android:id="@+id/select_cooking"
+            android:id="@+id/select_sports"
             android:layout_width="40dp"
             android:layout_height="20dp"
             android:layout_marginStart="350dp"
@@ -40,65 +40,30 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <RatingBar
-            android:id="@+id/Cooking_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="88dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="60dp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="Rate your skills"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#000"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
+        <EditText
+            android:id="@+id/Sports_played"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="145dp"
-            android:fontFamily="sans-serif-condensed"
-            android:paddingLeft="30dp"
-            android:text="Can Cook For"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#000"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/canCookFor"
-            android:layout_width="130dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="175dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="228dp"
             android:background="@drawable/rectangle"
             android:ems="10"
-            android:focusable="false"
             android:fontFamily="sans-serif-condensed"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:padding="5dp"
-            android:text="can cook for"
+            android:text="Baseball"
             android:textColor="#FF292929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="172dp"
-            android:layout_marginTop="177dp"
+            android:layout_marginTop="188dp"
             android:fontFamily="sans-serif-condensed"
-            android:text="members"
+            android:paddingLeft="16dp"
+            android:text="Name of the sport"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000"
             android:textSize="18sp"
@@ -108,10 +73,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="224dp"
+            android:layout_marginTop="48dp"
             android:fontFamily="sans-serif-condensed"
             android:paddingLeft="30dp"
-            android:text="Skills"
+            android:text="Performance Level"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#000"
             android:textSize="18sp"
@@ -119,78 +84,95 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/South_indian"
-            android:layout_width="100dp"
+            android:id="@+id/District_sports"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/button_bg"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:padding="5dp"
+            android:text="District"
+            android:textAlignment="center"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/State_sports"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/button_bg"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:padding="5dp"
+            android:text="State"
+            android:textAlignment="center"
+            android:textColor="#FF292929"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/national_sports"
+            android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="256dp"
+            android:layout_marginTop="132dp"
             android:background="@drawable/button_bg"
             android:ems="10"
             android:focusable="false"
             android:fontFamily="sans-serif-condensed"
             android:inputType="text"
             android:padding="5dp"
-            android:text="South Indian"
+            android:text="National"
             android:textAlignment="center"
             android:textColor="#FF292929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/North_Indian"
+            android:id="@+id/International_sports"
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="256dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="132dp"
             android:background="@drawable/button_bg"
             android:ems="10"
             android:focusable="false"
             android:fontFamily="sans-serif-condensed"
             android:inputType="text"
             android:padding="5dp"
-            android:text="North Indian"
+            android:text="International"
             android:textAlignment="center"
             android:textColor="#FF292929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/Continential"
-            android:layout_width="100dp"
+            android:id="@+id/college_sports"
+            android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="296dp"
+            android:layout_marginTop="92dp"
             android:background="@drawable/button_bg"
             android:ems="10"
             android:focusable="false"
             android:fontFamily="sans-serif-condensed"
             android:inputType="text"
             android:padding="5dp"
-            android:text="Continential"
-            android:textAlignment="center"
-            android:textColor="#FF292929"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/Bakery"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="296dp"
-            android:background="@drawable/button_bg"
-            android:ems="10"
-            android:focusable="false"
-            android:fontFamily="sans-serif-condensed"
-            android:inputType="text"
-            android:padding="5dp"
-            android:text="Bakery"
+            android:text="College"
             android:textAlignment="center"
             android:textColor="#FF292929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </ScrollView>
