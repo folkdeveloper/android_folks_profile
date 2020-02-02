@@ -23,7 +23,7 @@ android {
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
-        versionName "5.0"
+        versionName "4.7"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         /*manifestPlaceholders = [
                 onesignal_app_id               : 'e3eaacd4-aa0b-47c9-8ffa-7289362821d7',

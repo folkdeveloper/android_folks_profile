@@ -32,7 +32,7 @@
             android:name=".Splash_screen_major_updates"
             android:label="@string/app_name"
             android:versionCode="1"
-            android:versionName="5.0">
+            android:versionName="4.7">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
