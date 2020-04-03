@@ -24,6 +24,8 @@ public class Splash_screen_first_use extends AppCompatActivity {
         prefs = getSharedPreferences("com.Folk.FolkApp", MODE_PRIVATE);
         Skip = findViewById(R.id.skip);
 
+
+
         if (prefs.getBoolean("firstrun", true)) {
             // Do first run stuff here then set 'firstrun' as false
             // using the following line to edit/commit prefs

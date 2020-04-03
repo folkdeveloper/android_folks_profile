@@ -1,26 +1,14 @@
-package com.creation.android.folkapp2019;
+package com.creation.android.folkapp2019.feeds;
 
-
-import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -28,14 +16,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.creation.android.folkapp2019.feeds.Feed;
-import com.creation.android.folkapp2019.feeds.FeedsFragment;
-import com.creation.android.folkapp2019.feeds.FeedsListAdapter;
-import com.creation.android.folkapp2019.feeds.Status;
-import com.creation.android.folkapp2019.fragments.Profile;
+import com.creation.android.folkapp2019.MainActivity;
+import com.creation.android.folkapp2019.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -46,10 +30,15 @@ import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link FeedsFragment.OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ * Use the {@link FeedsFragment#newInstance} factory method to
+ * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class FeedsFragment extends Fragment {
 
-    private FeedsFragment.OnFragmentInteractionListener mListener;
+    private OnFragmentInteractionListener mListener;
 
     private RecyclerView recyclerView;
     private List<Feed> feedList;
@@ -60,7 +49,7 @@ public class HomeFragment extends Fragment {
 
     private FirebaseFirestore firebaseFirestore;
 
-    public HomeFragment() {
+    public FeedsFragment() {
         // Required empty public constructor
     }
 
@@ -95,7 +84,7 @@ public class HomeFragment extends Fragment {
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(adapter);
 
-        // final ProgressBar progressBar = view.findViewById(R.id.progress);
+       // final ProgressBar progressBar = view.findViewById(R.id.progress);
 
         firebaseFirestore = FirebaseFirestore.getInstance();
 
@@ -201,5 +190,4 @@ public class HomeFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
 }
